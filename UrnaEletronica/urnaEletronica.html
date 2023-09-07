@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletronica</title>
+
+    <style>
+        /* Reset de estilos globais */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Estilos globais para o corpo da página */
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        
+        /* Estilo para cabeçalhos h1 e h2 */
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        /* Estilo para cabeçalho h1 */
+        h1 {
+            font-size: 2.2em;
+            text-transform: uppercase;
+        }
+
+        /* Estilos para a seção principal */
+        section {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        /* Estilos para o container de informações do candidato */
+        .containerInfoCandidato {
+            text-align: center;
+        }
+
+        /* Estilos para a imagem do candidato */
+        .containerInfoCandidato img {
+            margin: 25px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        /* Estilos para o container de entrada de dados */
+        .containerInput {
+            margin: 15px 0;
+        }
+
+        /* Estilos para o campo de entrada de número do candidato */
+        #idlistaCandidatos {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Urna Eletrônica</h1>
+
+        <div class="containerInfoCandidato">
+            <img src="assets/candidato.png" alt="Fulano de Tal">
+            <h2>Fulano de Tal</h2>
+        </div>
+
+        <div class="containerInput">
+            <input list="listaCandidatos" id="idlistaCandidatos" name="nmlistaCandidatos"
+                placeholder="Número do Candidato" />
+
+            <datalist id="listaCandidatos">
+                <option value="Candidato 01"></option>
+                <option value="Candidato 02"></option>
+                <option value="Candidato 03"></option>
+                <option value="Candidato 03"></option>
+                <option value="Candidato 04"></option>
+            </datalist>
+        </div>
+
+        <div class="containerButton">
+            <button>Confirmar</button>
+            <button>Cancelar</button>
+            <button>Branco</button>
+        </div>
+    </section>
+
+</body>
+
+</html>
